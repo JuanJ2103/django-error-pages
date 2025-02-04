@@ -24,18 +24,7 @@ def generar_error(request):
 
 def onePage(request):
     return render(request, 'onePage.html', status=200)
-
-def buscar(request):
-    query = request.GET.get('q','')
-    results = []
-    if query:
-        data = google_search(query)
-        results = data.get("items", [])
-    return render (
-        request,
-        'search.html',
-        {'results':results,'query':query}
-    )    
+  
 
 def error_logs(request):
     return render(request, 'app/error_logs.html')
