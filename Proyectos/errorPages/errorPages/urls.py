@@ -30,7 +30,6 @@ urlpatterns = [
     path("", index, name='index'),
     path('error/', generar_error,name='error'),
     path('onePages/', onePage, name='onePage'),
-    path('buscar/', buscar, name='search'),
     path('error_logs/', error_logs, name='error_logs'),
     path('api/error_logs/', get_error_logs, name='get_error_logs'),
     path('users/', include('users.urls')),
